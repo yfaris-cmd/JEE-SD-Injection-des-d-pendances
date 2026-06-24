@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="dao" class="ma.enset.tp01.ext.DaoImplCapteur"/>
+
+    <bean id="metierConstructor" class="ma.enset.tp01.metier.demo.MetierImplConstructor">
+        <constructor-arg ref="dao"/>
+    </bean>
+
+    <bean id="metierSetter" class="ma.enset.tp01.metier.demo.MetierImplSetter">
+        <property name="dao" ref="dao"/>
+    </bean>
+
+    <bean id="metierField" class="ma.enset.tp01.metier.demo.MetierImplField">
+        <property name="dao" ref="dao"/>
+    </bean>
+</beans>
